@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Ho’oponopono & LOA coach helping you release emotional blocks and experience calm, joy and abundance.">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Lakshmi Rastogi</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;600;700&display=swap">
+<style>
+/* Layout: single centred link-in-bio column; profile header, grouped program cards, detail sheet that slides up */
+:root{
+  --bg:#f7f3f8; --surface:#ffffff; --fg:#2b1a33; --muted:#6e5d77; --line:#e6dcea;
+  --plum:#5b2a6e; --plum-ink:#ffffff; --gold:#d99a1e; --soft:#efe4f3;
+  --display:"Marcellus", Georgia, serif; --body:"Mulish", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#1a1220; --surface:#251a2d; --fg:#f3eaf6; --muted:#b6a5bf; --line:#3a2c44;
+  --plum:#c79be0; --plum-ink:#1a1220; --gold:#f0b54a; --soft:#2f2238; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1a1220; --surface:#251a2d; --fg:#f3eaf6; --muted:#b6a5bf; --line:#3a2c44;
+  --plum:#c79be0; --plum-ink:#1a1220; --gold:#f0b54a; --soft:#2f2238; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:560px;margin:0 auto;padding-block:40px 56px;display:flex;flex-direction:column;gap:32px}
+header{text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
+.avatar{width:112px;height:112px;border-radius:50%;display:grid;place-items:center;
+  background:radial-gradient(circle at 30% 30%,var(--gold),var(--plum) 70%);color:#fff;
+  font-family:var(--display);font-size:40px;letter-spacing:.04em;box-shadow:0 0 0 5px var(--surface),0 0 0 6px var(--line)}
+h1{font-family:var(--display);font-weight:400;font-size:2rem;margin:6px 0 0;text-wrap:balance}
+.tag{color:var(--muted);max-width:40ch;margin:0;text-wrap:balance}
+.badges{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:4px}
+.badge{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:99px;background:var(--soft);color:var(--plum);font-weight:700}
+.socials{display:flex;gap:10px;margin-top:6px}
+.socials a{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--fg);text-decoration:none;font-size:.78rem;font-weight:700;background:var(--surface)}
+.socials a:hover{border-color:var(--plum);color:var(--plum)}
+section{display:flex;flex-direction:column;gap:12px}
+h2{font-family:var(--display);font-weight:400;font-size:1.15rem;margin:0;display:flex;align-items:center;gap:10px;color:var(--muted)}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+.card{display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:center;width:100%;text-align:left;
+  background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px;color:var(--fg);font:inherit;cursor:pointer;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-2px);border-color:var(--plum)}
+.card:focus-visible,.btn:focus-visible,.close:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.thumb{width:64px;height:64px;border-radius:10px;display:grid;place-items:center;font-size:26px;color:#fff}
+.info{min-width:0}
+.info b{display:block;font-weight:700;line-height:1.3}
+.info span{display:block;color:var(--muted);font-size:.85rem}
+.price{font-variant-numeric:tabular-nums;font-weight:700;color:var(--plum);white-space:nowrap}
+.btn{display:inline-flex;justify-content:center;align-items:center;border:0;border-radius:99px;padding:12px 22px;
+  background:var(--plum);color:var(--plum-ink);font:inherit;font-weight:700;cursor:pointer;text-decoration:none}
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.contact div{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.contact span{color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:.8rem}
+.scrim{position:fixed;inset:0;background:rgba(20,10,25,.55);display:flex;align-items:flex-end;justify-content:center;z-index:20;
+  padding-left:max(0px,env(safe-area-inset-left,0px));padding-right:max(0px,env(safe-area-inset-right,0px))}
+.sheet{background:var(--surface);color:var(--fg);width:100%;max-width:560px;max-height:88vh;overflow:auto;border-radius:20px 20px 0 0;
+  padding:22px 20px calc(24px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:16px;animation:up .25s ease-out}
+@keyframes up{from{transform:translateY(30px);opacity:.6}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.sheet{animation:none}.card{transition:none}}
+.sheet-top{display:flex;justify-content:space-between;align-items:start;gap:12px}
+.sheet h3{font-family:var(--display);font-weight:400;font-size:1.5rem;margin:0;text-wrap:balance}
+.close{border:1px solid var(--line);background:transparent;color:var(--fg);border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:1.1rem;flex:none}
+.cover{height:140px;border-radius:14px;display:grid;place-items:center;font-size:54px;color:#fff}
+.sheet ul{margin:0;padding-left:18px}
+.steps{display:flex;flex-direction:column;gap:10px}
+.step{display:grid;grid-template-columns:28px 1fr;gap:10px}
+.step i{font-style:normal;width:28px;height:28px;border-radius:50%;background:var(--soft);color:var(--plum);display:grid;place-items:center;font-weight:700;font-size:.85rem}
+.step p{margin:0}.step small{color:var(--muted);display:block}
+.label{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.buy{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-top:14px;flex-wrap:wrap}
+.note{font-size:.85rem;color:var(--gold);min-height:1.2em}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="avatar" aria-hidden="true">LR</div>
+    <h1 id="name">Lakshmi Rastogi</h1>
+    <p class="tag" id="tagline">Ho’oponopono &amp; LOA coach helping you release emotional blocks and experience calm, joy and abundance.</p>
+    <div class="badges"><span class="badge">Ho’oponopono</span><span class="badge">Law of Attraction</span><span class="badge">Reiki</span></div>
+    <nav class="socials" aria-label="Social links">
+      <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+      <a href="https://youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
+      <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+    </nav>
+  </header>
+
+  <main id="programs" style="display:flex;flex-direction:column;gap:32px"></main>
+
+  <section>
+    <h2>Get in touch</h2>
+    <div class="contact">
+      <div><span>WhatsApp</span><strong>+91 00000 00000</strong></div>
+      <div><span>Email</span><strong>hello@lakshmirastogi.com</strong></div>
+    </div>
+  </section>
+
+  <footer>© 2026 Lakshmi Rastogi · Thank you, I love you, I’m sorry, please forgive me.</footer>
+</div>
+
+<div class="scrim" id="scrim" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="s-title">
+    <div class="sheet-top"><h3 id="s-title"></h3><button class="close" id="s-close" aria-label="Close">✕</button></div>
+    <div class="cover" id="s-cover"></div>
+    <p id="s-desc" style="margin:0"></p>
+    <div id="s-batches"></div>
+    <div><div class="label">How you get access</div>
+      <div class="steps" style="margin-top:10px">
+        <div class="step"><i>1</i><p>You go straight in<small>The moment payment goes through, you land inside the program and can start.</small></p></div>
+        <div class="step"><i>2</i><p>An email with your link<small>Your access link arrives by email right away. Open it any time.</small></p></div>
+        <div class="step"><i>3</i><p>And a WhatsApp message<small>The same link comes on WhatsApp too, so you never have to search your inbox.</small></p></div>
+      </div>
+    </div>
+    <div class="buy">
+      <div><div class="label">Lifetime access · invoice emailed at checkout</div><div class="price" id="s-price" style="font-size:1.3rem"></div></div>
+      <a class="btn" id="s-enroll" href="#" target="_blank" rel="noopener">Enroll now</a>
+    </div>
+    <div class="note" id="s-note"></div>
+  </div>
+</div>
+
+<script>
+/* ===== EDIT YOUR PROGRAMS HERE =====
+   link: paste the payment / course page URL. price: shown as written. */
+const PROGRAMS = [
+  { group:"Memberships", title:"One Year Membership", sub:"All programs for 12 months", price:"₹ —", icon:"✦", hue:"#5b2a6e,#b0569a", link:"" },
+  { group:"Memberships", title:"Lifetime Membership", sub:"Every program, forever", price:"₹ —", icon:"∞", hue:"#3d1f52,#d99a1e", link:"" },
+  { group:"Healing programs", title:"15 Days Healing", sub:"Live batch · 15 days", price:"₹ —", icon:"❀", hue:"#7a3b6b,#e48aa6", link:"",
+    batches:["Next live batch: dates to be announced","Bonuses included"] },
+  { group:"Healing programs", title:"Advance Healing", sub:"For those who finished 15 Days Healing", price:"₹ —", icon:"☀", hue:"#8a4a1c,#e8b04a", link:"" },
+  { group:"Healing programs", title:"7 Days Chakra Sadhna", sub:"One chakra a day", price:"₹ —", icon:"◉", hue:"#2f4f8a,#9b5fc0", link:"" },
+  { group:"Healing programs", title:"Angel Meditation", sub:"Guided meditation", price:"₹ —", icon:"☁", hue:"#4b6aa8,#b9a7e6", link:"" },
+  { group:"Abundance", title:"Money Reiki", sub:"Reiki for your money energy", price:"₹ —", icon:"₹", hue:"#7a5a10,#d9a51e", link:"" },
+  { group:"Abundance", title:"From Lack to Lakhs", sub:"Money manifestation system", price:"₹ —", icon:"❖", hue:"#1f6b55,#d9a51e", link:"" },
+  { group:"Daily practice", title:"Morning Magic Handwriting", sub:"Write your day into being", price:"₹ —", icon:"✎", hue:"#9a4a3a,#e3a07a", link:"" },
+  { group:"Daily practice", title:"Magic Practice with Lakshmi Rastogi", sub:"Daily guided practice", price:"₹ —", icon:"✧", hue:"#5b2a6e,#e48aa6", link:"" },
+  { group:"Daily practice", title:"Self Love Challenge", sub:"A short challenge to come back to yourself", price:"₹ —", icon:"♡", hue:"#a8325e,#f09ab3", link:"" },
+];
+
+const $ = s => document.querySelector(s);
+const main = $("#programs");
+const groups = [...new Set(PROGRAMS.map(p=>p.group))];
+groups.forEach(g=>{
+  const sec = document.createElement("section");
+  sec.innerHTML = `<h2>${g}</h2>`;
+  PROGRAMS.filter(p=>p.group===g).forEach(p=>{
+    const b = document.createElement("button");
+    b.className="card"; b.type="button";
+    b.innerHTML = `<div class="thumb" style="background:linear-gradient(135deg,${p.hue})">${p.icon}</div>
+      <div class="info"><b>${p.title}</b><span>${p.sub}</span></div><div class="price">${p.price}</div>`;
+    b.onclick = ()=>openSheet(p);
+    sec.appendChild(b);
+  });
+  main.appendChild(sec);
+});
+
+let lastFocus;
+function openSheet(p){
+  lastFocus = document.activeElement;
+  $("#s-title").textContent = p.title;
+  $("#s-cover").style.background = `linear-gradient(135deg,${p.hue})`;
+  $("#s-cover").textContent = p.icon;
+  $("#s-desc").textContent = p.sub + ". Add a full description of this program here.";
+  $("#s-batches").innerHTML = p.batches ? `<div class="label">Batches</div><ul style="margin-top:6px">${p.batches.map(x=>`<li>${x}</li>`).join("")}</ul>` : "";
+  $("#s-price").textContent = p.price;
+  const e = $("#s-enroll");
+  e.href = p.link || "#";
+  $("#s-note").textContent = "";
+  e.onclick = ev => { if(!p.link){ ev.preventDefault(); $("#s-note").textContent = "Payment link not added yet."; } };
+  $("#scrim").hidden = false;
+  $("#s-close").focus();
+}
+function closeSheet(){ $("#scrim").hidden = true; lastFocus && lastFocus.focus(); }
+$("#s-close").onclick = closeSheet;
+$("#scrim").onclick = e => { if(e.target.id==="scrim") closeSheet(); };
+document.addEventListener("keydown", e => { if(e.key==="Escape" && !$("#scrim").hidden) closeSheet(); });
+</script>
+</body>
+</html>
